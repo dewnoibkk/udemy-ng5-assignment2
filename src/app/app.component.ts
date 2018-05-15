@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  username: string;
+
+  isButtonEnabled(): boolean {
+    return this.username === null || this.username === '';
+  }
+
+  foo(): void {
+    this.username = '';
+  }
 }
