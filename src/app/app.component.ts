@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  username: string;
+
+  isButtonEnabled(): boolean {
+    return this.username === null || this.username === '';
+  }
+
+  foo(): void {
+    this.username = '';
+  }
 }
