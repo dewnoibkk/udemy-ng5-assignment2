@@ -15,4 +15,13 @@ export class AppComponent {
   foo(): void {
     this.username = '';
   }
+  username: string;
+
+  isButtonEnabled(): boolean {
+    return this.username === null || this.username === '';
+  }
+
+  foo(): void {
+    this.username = '';
+  }
 }
